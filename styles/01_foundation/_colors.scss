@@ -1,0 +1,18 @@
+// PRIMARY COLOR
+$illuminating: #F5DF4D;
+$illuminating-accent: #F7DB23; // button hover
+$primary: $illuminating;
+$primary-accent: $illuminating-accent;
+
+// ACCENT COLORS
+$orange: #DC682B; // subhead
+$blue: #147EFB; // sent message bubble
+
+// MAIN COLORS
+$light-black: #242424; // text
+$light-grey: #EBEBEB; // chat bg
+$dark-white: #F4F4F4; // body bg
+
+.bg-yellow{
+    background-color: $illuminating;
+}

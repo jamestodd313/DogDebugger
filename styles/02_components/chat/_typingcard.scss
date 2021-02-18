@@ -1,0 +1,17 @@
+.typing-card{
+    background: white;
+    width: 50vw;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #4BE5B5;
+    animation: colorz 2s linear infinite;
+}
+@keyframes colorz{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(359deg);
+    }
+}

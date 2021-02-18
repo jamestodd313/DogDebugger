@@ -1,0 +1,43 @@
+.chat-card{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 24px;
+    align-items: flex-end;
+    p{
+        padding: 12px;
+        width: 100%;
+        font-weight: 500;
+        line-height: 12px * 1.618;
+        align-self: stretch;
+    }
+    img{
+        align-self: flex-end;
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+    &.outgoing{
+        flex-flow: row-reverse nowrap;
+        padding-left: 40px;
+        color: white;
+        img{
+            border-radius: 2px 12px 12px 2px;
+        }
+        p{
+            background-color: $blue;
+            margin-right: 8px;
+            border-radius: 12px 4px 4px 12px;
+        }
+    }
+    &.incoming{
+        padding-right: 0px;
+        img{
+            border-radius: 12px 4px 4px 12px;
+        }
+        p{
+            background-color: white;
+            margin-left: 8px;
+            border-radius: 4px 12px 12px 4px;
+        }
+    }
+}

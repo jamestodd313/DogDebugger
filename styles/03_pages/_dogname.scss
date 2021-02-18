@@ -1,0 +1,62 @@
+.chat-container{
+    background: $dark-white;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    header{
+        padding: 40px 24px 24px;
+        display: flex;
+        position: sticky;
+        background: $dark-white;
+        top: 0;
+        z-index: 10;
+        button{
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        h1{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 35px;
+        }
+    }
+    .chat-box{
+        background: $light-grey;
+        padding: 16px 24px;
+        overflow-y: scroll;
+        margin-bottom: 100px;
+    }
+    .new-message-form{
+        box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
+        position:fixed;
+        bottom: 0;
+        background: $dark-white;
+        width: 100vw;
+        padding: 16px 24px 40px 24px;
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+        grid-gap: 24px;
+        textarea{
+            grid-column: 1 / span 3;
+            background: white;
+            border: 1px solid #D6D6D6;
+            border-radius: 4px;
+            font-family: 'Quicksand', sans-serif;
+            padding: 8px 12px;
+        }
+        button{
+            transition: 0.2s;
+            background-color: $illuminating;
+            border-radius: 4px;
+            border: 1px solid white;
+            font-size: 12px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+            &:hover{
+                background-color: $illuminating-accent;
+                box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}

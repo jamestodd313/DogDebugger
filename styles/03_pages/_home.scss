@@ -1,0 +1,27 @@
+.home-container{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    header.home-header{
+        padding: 40px 24px;
+    }
+    nav{
+        box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
+        border-radius: 24px 24px 0px 0px;
+        header.menu-header{
+            padding: 40px 24px;
+        }
+        ul.contact-list{
+            padding: 0px 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 24px;
+            text-align: center;
+            li{
+                &:last-of-type{
+                    grid-column-start: 2;
+                }
+            }
+        }
+    }
+}

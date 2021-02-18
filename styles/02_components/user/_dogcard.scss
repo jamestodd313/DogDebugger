@@ -1,9 +1,17 @@
 .dog-card{
+    transition: 0.2s;
     .user-img{
         border-radius: 50%;
         display: block;
     }
     span{
         display: block;
+    }
+    &:hover{
+        transform: translateY(-10px);
+        padding-bottom: 15px;
+        span{
+            text-decoration: underline;
+        }
     }
 }

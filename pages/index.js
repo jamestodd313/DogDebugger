@@ -41,7 +41,9 @@ export default function Home() {
     <div className="page-container bg-yellow home-container">
       <header className="home-header">
         <h1 className="light">DOG DEBUGGER</h1>
-        <span className="subheading">By James Todd</span>
+        <a href="https://jamestodd.dev" target="_blank">
+          <span className="subheading">By James Todd</span>
+        </a>
       </header>
       <nav className="contacts">
         <header className="menu-header">

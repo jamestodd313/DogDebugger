@@ -181,7 +181,7 @@ body {
 }
 
 .chat-card.incoming {
-  padding-right: 0px;
+  padding-right: 40px;
 }
 
 .chat-card.incoming img {
@@ -314,6 +314,16 @@ body {
   padding: 16px 24px;
   overflow-y: scroll;
   margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .chat-container .new-message-form {
@@ -340,6 +350,10 @@ body {
   border-radius: 4px;
   font-family: 'Quicksand', sans-serif;
   padding: 8px 12px;
+}
+
+.chat-container .new-message-form textarea:focus {
+  font-size: 16px;
 }
 
 .chat-container .new-message-form button {

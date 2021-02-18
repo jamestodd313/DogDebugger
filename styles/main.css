@@ -241,14 +241,15 @@ body {
   display: block;
 }
 
-.dog-card:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-  padding-bottom: 15px;
-}
-
-.dog-card:hover span {
-  text-decoration: underline;
+@media screen and (min-width: 992px) {
+  .dog-card:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    padding-bottom: 15px;
+  }
+  .dog-card:hover span {
+    text-decoration: underline;
+  }
 }
 
 .home-container {

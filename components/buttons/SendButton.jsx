@@ -1,7 +1,5 @@
-export const SendButton = () => {
+export const SendButton = ({handleSend}) => {
     return (
-        <div>
-            
-        </div>
+        <button className="send-btn" onClick={e=> handleSend(e)}>Send</button>
     )
 }

@@ -4,6 +4,8 @@ import {ChatCard} from '../../components/chat/ChatCard'
 import {TypingCard} from '../../components/chat/TypingCard'
 import { capitalizeName } from '../../util/capitalizeName'
 import Head from 'next/head'
+import { ChatForm } from '../../components/chat/ChatForm'
+import { SendButton } from '../../components/buttons/SendButton'
 export default function dogname({dogsName}){
     const router = useRouter()
     const [messageInput, setMessageInput] = useState('')
@@ -106,10 +108,11 @@ export default function dogname({dogsName}){
                     {dogTyping ? <TypingCard name={dogsName}/> : null}
                     <div ref={endRef}/>
                 </section>
-                <form className="new-message-form">
+                <ChatForm>
                     <textarea className="message-input" value={messageInput} onChange={e=> setMessageInput(e.target.value)} placeholder="Explain your code here..."></textarea>
-                    <button className="send-btn" onClick={e=> handleSend(e)}>Send</button>
-                </form>
+                    <SendButton handleSend={handleSend}/>
+                </ChatForm>
+
             </div>
         </>
     )

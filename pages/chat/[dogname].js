@@ -6,6 +6,8 @@ import { capitalizeName } from '../../util/capitalizeName'
 import Head from 'next/head'
 import { ChatForm } from '../../components/chat/ChatForm'
 import { SendButton } from '../../components/buttons/SendButton'
+import { ChatHeader } from '../../components/chat/ChatHeader'
+import { BackButton } from '../../components/buttons/BackButton'
 export default function dogname({dogsName}){
     const router = useRouter()
     const [messageInput, setMessageInput] = useState('')
@@ -95,24 +97,19 @@ export default function dogname({dogsName}){
                 <title>{`${capitalizeName(dogsName)}`} - Dog Debugger | By James Todd</title>
             </Head>
             <div className="page-container chat-container">
-                <header className="chat-header">
-                    <button className="back-btn" onClick={e=> router.back()}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18.634" height="30.704" viewBox="0 0 18.634 30.704">
-                            <path id="Icon_awesome-chevron-left" data-name="Icon awesome-chevron-left" d="M2.427,16.807,16.092,3.142a1.688,1.688,0,0,1,2.386,0l1.594,1.594a1.688,1.688,0,0,1,0,2.384L9.245,18l10.83,10.881a1.687,1.687,0,0,1,0,2.384l-1.594,1.594a1.688,1.688,0,0,1-2.386,0L2.427,19.193A1.688,1.688,0,0,1,2.427,16.807Z" transform="translate(-1.933 -2.648)"/>
-                        </svg>
-                    </button>
-                    <h1 className="bold">{dogsName ? capitalizeName(dogsName) : ""}</h1>
-                </header>
+                <ChatHeader>
+                    <BackButton goBack={e=> router.back()}/>
+                    <h1 className="bold">{dogsName ? capitalizeName(dogsName) : null}</h1>
+                </ChatHeader>
                 <section className="chat-box">
                     {messages.map(msg=> <ChatCard key={msg.id} message={msg}/>)}
                     {dogTyping ? <TypingCard name={dogsName}/> : null}
                     <div ref={endRef}/>
                 </section>
                 <ChatForm>
-                    <textarea className="message-input" value={messageInput} onChange={e=> setMessageInput(e.target.value)} placeholder="Explain your code here..."></textarea>
+                    <textarea className="message-input" value={messageInput} onChange={e=> setMessageInput(e.target.value)} placeholder="Explain your code here..."/>
                     <SendButton handleSend={handleSend}/>
                 </ChatForm>
-
             </div>
         </>
     )

@@ -35,7 +35,6 @@ export default function Home() {
     <>
     <Head>
       <title>Dog Debugger | By James Todd</title>
-      {/* <link rel="favicon" href="/icons/favicon.ico"/> */}
       <link rel="shortcut icon" type="image/jpg" href="/icons/favicon.png"/>
     </Head>
     <div className="page-container bg-yellow home-container">
